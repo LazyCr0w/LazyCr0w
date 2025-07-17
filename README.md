@@ -73,6 +73,6 @@ A content-based recommender that uses NLP and cosine similarity to suggest simil
 ### 🐍 Contribution Snake
  
 <p align="center">
-  <img src="https://github.com/LazyCr0w/LazyCr0w/blob/dist/github-contribution-grid-snake.svg" alt="snake gif" />
+  <img src="https://github.com/LazyCr0w/LazyCr0w/blob/main/dist/github-contribution-grid-snake.svg" alt="snake gif" />
 </p>
 
