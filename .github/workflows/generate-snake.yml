@@ -5,24 +5,23 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Generate Snake SVG
+      - name: Generate GitHub Contribution Snake
         uses: Platane/snk@master
         with:
           github_user_name: LazyCr0w
-          outputs: |
-            dist/github-contribution-grid-snake.svg
+          svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - name: Commit and Push
+      - name: Push generated snake.svg to the output branch
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions
           author_email: github-actions@github.com
           message: "🐍 Generated GitHub Contribution Snake"
-          add: "dist/*.svg"
+          add: "dist/github-contribution-grid-snake.svg"
